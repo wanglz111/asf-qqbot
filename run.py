@@ -2,8 +2,8 @@ import config
 from qqbot import QQBotSlot as qqbotslot,RunBot
 import ASF_IPC as asf
 
-ipc_address = 'http://192.168.1.224/'
-ipc_password = 'wanglz970915'
+ipc_address = 'http://127.0.0.1:1242/'
+ipc_password = ''
 api = asf.IPC(ipc_address, ipc_password)
 
 type = []
@@ -25,11 +25,6 @@ def send(command):
 
 
 @qqbotslot
-def onQQMessage(bot, contact, member, content):
-    if bot.isMe(contact, member):
-        pass
-
-
 def onQQMessage(bot, contact, member, content):
 
     if content:

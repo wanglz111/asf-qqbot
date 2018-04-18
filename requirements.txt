@@ -1,0 +1,4 @@
+pillow
+wcwidth
+ASF_IPC
+qqbot

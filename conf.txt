@@ -58,7 +58,6 @@
             'qqbot.plugins.schedrestart',
         ],
 	    "pluginsConf" : {
-	        'qqbot.plugins.schedrestart': '8:00',
 	    }
 }
 

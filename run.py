@@ -4,8 +4,8 @@ from qqbot import QQBotSlot as qqbotslot,RunBot
 import ASF_IPC as asf
 
 
-ipc_address = ''
-ipc_password = 'wanglz970915'
+ipc_address = 'https://127.0.0.1:1242/'
+ipc_password = ''
 api = asf.IPC(ipc_address, ipc_password)
 
 type = []

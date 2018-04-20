@@ -1,13 +1,16 @@
 import config
+from qqbot import _bot as bot
 from qqbot import QQBotSlot as qqbotslot,RunBot
 import ASF_IPC as asf
 
-ipc_address = 'http://127.0.0.1:1242/'
-ipc_password = ''
+
+ipc_address = ''
+ipc_password = 'wanglz970915'
 api = asf.IPC(ipc_address, ipc_password)
 
 type = []
 config.create_conf()
+config.create_plugs()
 
 
 def send(command):
@@ -27,13 +30,11 @@ def send(command):
 @qqbotslot
 def onQQMessage(bot, contact, member, content):
 
-    if content:
+    if content !='botstop':
         res = send(content)
         bot.SendTo(contact, res)
     elif content == 'botstop':
         bot.Stop()
-
-
 
 
 if __name__ == '__main__':
